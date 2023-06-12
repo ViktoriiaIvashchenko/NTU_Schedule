@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Teachers.Sylenok_HA.SylenokHA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/my_light_primary" />
+
+    <!--Кнопки для переходу між днями-->
+    <HorizontalScrollView
+        android:id="@+id/scrollButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="onClickMon"
+                android:text="@string/mon_name" />
+
+            <Button
+                android:id="@+id/buttonTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="onClickTue"
+                android:text="@string/tue_name" />
+
+            <Button
+                android:id="@+id/buttonWen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wen_name"
+                android:onClick="onClickWen"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/buttonThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thu_name"
+                android:onClick="onClickThu"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/buttonFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fri_name"
+                android:onClick="onClickFri"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!--Заголовок дня тиждня-->
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollButton"
+        android:layout_margin="15dp"
+        android:text="@string/monday_name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <ScrollView
+        android:id="@+id/scrollSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Перша пара-->
+            <TableLayout
+                android:id="@+id/les1m_t182"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_info"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:background="@color/my_back_light1"
+                android:stretchColumns="*">
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lessontime1m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/my_back_dark"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/name1m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/my_back_light1"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/group1m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/my_back_light1"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/aud1m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/my_back_light1"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </TableRow>
+            </TableLayout>
+
+            <!--Друга пара-->
+            <TableLayout
+                android:id="@+id/les2m_t182"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:stretchColumns="*"
+                android:layout_margin="10dp"
+                android:background="@color/my_back_light1">
+                <!--Друга пара непарного тиждня-->
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lessontime21m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_dark"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/numbweek21m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Непарний тиждень"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/name21m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:background="@color/my_back_light1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/group21m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/aud21m_t182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

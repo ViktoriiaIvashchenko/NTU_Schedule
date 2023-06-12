@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/my_light_primary" />
+
+    <TextView
+        android:id="@+id/text_hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:text="ВІТАЄМО!"
+        android:textSize="38sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_hello"
+        android:layout_margin="10dp"
+        android:text="Оберіть для кого призначений розклад"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/for_st"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/text_header"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"
+        android:onClick="onClickStud"
+        android:text="Студентам"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/for_teach"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/for_st"
+        android:layout_margin="35dp"
+        android:onClick="onClickTeach"
+        android:text="Викладачам"
+        android:textSize="30dp"/>
+
+    <ImageView
+        android:id="@+id/picture_ntu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/for_teach"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/ntu_picture" />
+
+</RelativeLayout >

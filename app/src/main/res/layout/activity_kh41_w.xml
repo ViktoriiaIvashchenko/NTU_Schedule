@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="GroupsFTIT.KH_4_1.KH_4_1_w">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/my_light_primary" />
+
+    <!--Кнопки для переходу між днями-->
+    <HorizontalScrollView
+        android:id="@+id/scrollButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mon_name"
+                android:onClick="onClickMon"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/buttonTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tue_name"
+                android:onClick="onClickTue"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/buttonWen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wen_name"
+                android:onClick="onClickWen"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/buttonThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thu_name"
+                android:onClick="onClickThu"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/buttonFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fri_name"
+                android:onClick="onClickFri"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!--Заголовок дня тиждня-->
+    <TextView
+        android:id="@+id/text_day_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollButton"
+        android:layout_margin="15dp"
+        android:text="@string/wednesday_name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <ScrollView
+        android:id="@+id/scrollSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_day_name">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Перша пара-->
+            <TableLayout
+                android:id="@+id/les1w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_info"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:background="@color/my_back_light1"
+                android:stretchColumns="*">
+                <!--Перша пара парного тиждня-->
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lessontime12w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_dark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/numbweek12w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Парний тиждень"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/name12w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/teacher12w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/aud12w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/address12w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+            </TableLayout>
+
+            <!--Друга пара-->
+            <TableLayout
+                android:id="@+id/les2w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:stretchColumns="*"
+                android:layout_margin="10dp"
+                android:background="@color/my_back_light1">
+                <!--Друга пара непарного тиждня-->
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lessontime21w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_dark"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/numbweek21w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Непарний тиждень"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/name21w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:background="@color/my_back_light1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/teacher21w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/aud21w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/address21w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <!--Друга пара парного тиждня-->
+                <TableRow>
+                    <TextView
+                        android:id="@+id/numbweek22w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Парний тиждень"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/name22w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/teacher22w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/aud22w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/address22w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light2"/>
+                </TableRow>
+            </TableLayout>
+
+            <!--Третя пара-->
+            <TableLayout
+                android:id="@+id/les3w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:stretchColumns="*"
+                android:layout_margin="10dp"
+                android:background="@color/my_back_light1">
+                <!--Третя пара непарного тиждня-->
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lessontime31w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_dark"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/numbweek31w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Непарний тиждень"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textEnd"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/name31w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:background="@color/my_back_light1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/teacher31w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/aud31w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/address31w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:background="@color/my_back_light1"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

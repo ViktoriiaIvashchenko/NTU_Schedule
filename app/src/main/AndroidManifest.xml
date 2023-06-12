@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.MediaStore.createWriteRequest" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ntu"
+        tools:targetApi="31" >
+        <activity
+            android:name="Teachers.Svatko_VV.Svatko_VV_m"
+            android:exported="false" />
+        <activity
+            android:name="Teachers.Sylenok_HA.SylenokHA_fri"
+            android:exported="false" />
+        <activity
+            android:name="Teachers.Sylenok_HA.SylenokHA_thu"
+            android:exported="false" />
+        <activity
+            android:name="Teachers.Sylenok_HA.SylenokHA_wen"
+            android:exported="false" />
+        <activity
+            android:name="Teachers.Sylenok_HA.SylenokHA_tue"
+            android:exported="false" />
+        <activity
+            android:name="Teachers.Sylenok_HA.SylenokHA"
+            android:exported="false" />
+        <activity
+            android:name="GroupsFTIT.KH_1_1.KH_1_1_m"
+            android:exported="false" />
+        <activity
+            android:name=".for_teachers"
+            android:exported="false" />
+        <activity
+            android:name=".for_students"
+            android:exported="false" />
+        <activity
+            android:name="GroupsFTIT.KH_4_1.KH_4_1_f"
+            android:exported="false" />
+        <activity
+            android:name="GroupsFTIT.KH_4_1.KH_4_1_thu"
+            android:exported="false" />
+        <activity
+            android:name="GroupsFTIT.KH_4_1.KH_4_1_w"
+            android:exported="false" />
+        <activity
+            android:name="GroupsFTIT.KH_4_1.KH_4_1_tue"
+            android:exported="false" />
+        <activity
+            android:name="GroupsFTIT.KH_4_1.KH_4_1_m"
+            android:exported="false" />
+        <activity
+            android:name="Groups.Groups_fmlt"
+            android:exported="false" />
+        <activity
+            android:name="Groups.Groups_fep"
+            android:exported="false" />
+        <activity
+            android:name="Groups.Groups_ftb"
+            android:exported="false" />
+        <activity
+            android:name="Groups.Groups_amf"
+            android:exported="false" />
+        <activity
+            android:name="Groups.Groups_ftit"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
